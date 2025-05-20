@@ -1,0 +1,13 @@
+h1 {
+  color: blueviolet; /* Default/original color */
+}
+
+p {
+  font-size: 18px;
+}
+
+button {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}

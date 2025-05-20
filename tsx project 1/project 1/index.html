@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Toggle Color</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 id="main-heading">Hello, World!</h1>
+  <p>This is my first styled webpage.</p>
+  <button id="color-btn">Toggle Heading Color</button>
+
+  <script>
+    const heading = document.getElementById('main-heading');
+    const btn = document.getElementById('color-btn');
+
+    // Store original color
+    const originalColor = heading.style.color || 'blueviolet'; // fallback if inline style not set
+    const newColor = 'crimson';
+
+    // Track toggle state
+    let isColorChanged = false;
+
+    btn.addEventListener('click', () => {
+      if (!isColorChanged) {
+        heading.style.color = newColor;
+        isColorChanged = true;
+      } else {
+        heading.style.color = originalColor;
+        isColorChanged = false;
+      }
+    });
+
+    console.log("Color toggle script is running.");
+  </script>
+</body>
+</html>
